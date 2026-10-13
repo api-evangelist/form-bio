@@ -1,0 +1,37 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.formbio.com/form-bio-cli-sdk
+sources:
+- https://docs.formbio.com/form-bio-cli-sdk
+- https://docs.formbio.com/workflows-1/power-tools
+- https://docs.formbio.com/workflows-1/quick-tools
+install:
+- method: PowerShell
+  command: iwr https://cli.formbio.com/public/latest/install/windows | iex
+- method: curl (macOS)
+  command: curl -sSL https://cli.formbio.com/public/latest/install/macos | bash
+- method: curl (Linux)
+  command: curl -sSL https://cli.formbio.com/public/latest/install/linux | bash
+- method: add to PATH (macOS/Linux)
+  command: sudo ln -s $HOME/.local/bin/formbio /usr/local/bin/formbio
+commands:
+- group: auth
+  commands:
+  - formbio auth login
+  - formbio auth logout
+  - formbio auth whoami
+- group: storage
+  commands:
+  - formbio storage ls
+  - formbio storage cp
+  - formbio storage mkdir
+- group: workflow
+  commands:
+  - formbio workflow run
+- group: general
+  commands:
+  - formbio --help
+  - formbio version
+binary: formbio
+docs: https://docs.formbio.com/form-bio-cli-sdk

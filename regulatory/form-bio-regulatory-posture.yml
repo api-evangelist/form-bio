@@ -1,0 +1,12 @@
+generated: '2026-10-13'
+method: probed
+source: https://www.formbio.com/privacy-policy
+signals:
+  age_assurance:
+    url: https://www.formbio.com/privacy-policy
+    note: The policy explicitly restricts service use to adults and prohibits data collection from children under 13.
+    evidence:
+      - source: https://www.formbio.com/privacy-policy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        quote: "None of the Form Bio Services are intended for minors under 18 years of age. No one under age 13 may provide any information on or through the Site or the other Form Bio Services."

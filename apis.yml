@@ -1,23 +1,101 @@
 aid: form-bio
+
 name: Form Bio
-description: 'Form Bio is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/68f288490cb3cdefe2f4a51f/69039e70a649d722ba8c909c_homepage-og.jpg
+
+description: Form Bio is an AI‑driven biotech company focused on accelerating the development of genetic medicines and genome engineering solutions.
+  Leveraging proprietary AI platforms, Form Bio provides end‑to‑end services from vector design and optimization to manufacturing analytics, helping
+  partners de‑risk and accelerate therapeutic programs across human and animal health.
+
 url: https://raw.githubusercontent.com/api-evangelist/form-bio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-12'
+
 modified: '2026-10-12'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- AI
+- Genetic Medicine
+- Genome Engineering
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/form-bio-rules.yml
+- type: CLI
+  url: cli/form-bio-cli.yml
+- type: Compliance
+  url: https://trust.formbio.com/
+- type: Conformance
+  url: conformance/form-bio-conformance.yml
+- type: Hosts
+  url: hosts/form-bio-hosts.yml
+- type: Vendors
+  url: vendors/form-bio-vendors.yml
+- type: Newsroom
+  url: https://www.formbio.com/news
+- type: Documentation
+  url: https://docs.formbio.com/
+- type: DeveloperPortal
+  url: https://docs.form.bio/creating-new-projects
+- type: GitHubOrganization
+  url: https://github.com/formbio
+- type: TrustCenter
+  url: security/form-bio-trust-center.yml
+- type: DomainSecurity
+  url: security/form-bio-domain-security.yml
 - type: Website
   url: https://www.formbio.com
+- type: PrivacyPolicy
+  url: https://www.formbio.com/privacy-policy
+- type: TermsOfService
+  url: https://www.formbio.com/terms-of-use
+
+apis:
+- name: Form Bio API
+  description: API documentation is provided at the Form Bio developer docs site.
+  humanURL: https://docs.formbio.com/
+  aid: form-bio:form-bio-api-2
+- aid: form-bio:form-bio-api
+  name: Form Bio API
+  description: 'Form Bio API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-13); not
+
+    the provider''s own document.'
+  humanURL: https://docs.formbio.com/form-bio-cli-sdk
+  baseURL: https://cli.formbio.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/form-bio-openapi-generated.yml
+    x-provenance: generated
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation pages exist but no OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL contracts were found.
+  evidence:
+  - url: https://docs.formbio.com/
+    status: 200
+  checked: '2026-10-13'
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

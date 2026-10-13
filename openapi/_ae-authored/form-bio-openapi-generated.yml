@@ -1,0 +1,64 @@
+openapi: 3.1.0
+info:
+  title: Form Bio API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 2 operation(s) read from 2 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Form Bio has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: -1
+    pages-with-code: 2
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.formbio.com/form-bio-cli-sdk
+  - https://docs.formbio.com/data-analysis-and-visualization/form-data-transfer
+servers:
+- url: https://cli.formbio.com
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Api
+      summary: GET /
+      x-source: https://docs.formbio.com/data-analysis-and-visualization/form-data-transfer
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl command: Copy curl -d "client_id=xxxxxx.apps.googleusercontent.com"  -d "client_secret=xxx-xxxxxx"  -d "code=<authorization_code>"  -d
+          "redirect_uri=http://localhost"  -d "grant_type=authorization_code"  https://oauth2.googleapis.com/token Copy the curl command and execute
+          it in the Cloud Shell, you will receive an access token that should look something like: {"access_token":"xxxxxxxxxx","to'
+  /public/latest/install/{installid}:
+    get:
+      operationId: get_public_latest_install_installid
+      tags:
+      - Public
+      summary: GET /public/latest/install/linux
+      x-source: https://docs.formbio.com/form-bio-cli-sdk
+      parameters:
+      - name: installid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -sSL https://cli.formbio.com/public/latest/install/linux | bash
+        collapsed_from: 2 example path(s) differing only at installId
+tags:
+- name: Api
+- name: Public
