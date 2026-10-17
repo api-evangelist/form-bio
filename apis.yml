@@ -73,18 +73,26 @@ apis:
   description: API documentation is provided at the Form Bio developer docs site.
   humanURL: https://docs.formbio.com/
   aid: form-bio:form-bio-api-2
-- aid: form-bio:form-bio-api
-  name: Form Bio API
-  description: 'Form Bio API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-13); not
-
-    the provider''s own document.'
-  humanURL: https://docs.formbio.com/form-bio-cli-sdk
+- aid: form-bio:form-bio-form-bio-api-api
+  name: Form Bio Form Bio API
+  description: The Form Bio API API from Form Bio — 1 operation(s) for form bio api.
+  humanURL: https://docs.formbio.com/
   baseURL: https://cli.formbio.com
+  tags:
+  - Form Bio API
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/form-bio-openapi-generated.yml
-    x-provenance: generated
-
+    url: openapi/form-bio-form-bio-api-api-openapi.yml
+- aid: form-bio:form-bio-public-api
+  name: Form Bio Public API
+  description: The Public API from Form Bio — 1 operation(s) for public.
+  humanURL: https://docs.formbio.com/
+  baseURL: https://cli.formbio.com
+  tags:
+  - Public
+  properties:
+  - type: OpenAPI
+    url: openapi/form-bio-public-api-openapi.yml
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
